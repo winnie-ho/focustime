@@ -28,7 +28,7 @@ const styles = (size) =>
       borderWidth: 2,
     },
     text: {
-      colour: palette.white,
+      color: palette.white,
       fontSize: size / 3,
     },
   });

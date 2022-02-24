@@ -4,12 +4,12 @@ import { fontSize, spacing, palette } from '../../utils/baseStyles';
 
 export const Countdown = (props) => {
   const {
-  minutes,
-  isPaused, 
-  onProgress,
-  onEnd,
+    minutes,
+    isPaused,
+    onProgress,
+    onEnd,
   } = props;
-  
+
   const interval = React.useRef(null);
   const countDown = () => {
     setMs((time) => {
@@ -24,9 +24,9 @@ export const Countdown = (props) => {
     })
   }
 
-  React.useEffect (() => {
+  React.useEffect(() => {
     if (isPaused) {
-      if(interval.current) clearInterval(interval.current);
+      if (interval.current) clearInterval(interval.current);
       return;
     }
     interval.current = setInterval(countDown, 1000);
@@ -39,7 +39,7 @@ export const Countdown = (props) => {
   const minute = Math.floor(ms / 1000 / 60) % 60;
   const seconds = (ms / 1000) % 60;
 
-  const formatTime = (time) => time < 10 ? `0${time}`: time
+  const formatTime = (time) => time < 10 ? `0${time}` : time
 
   return (
     <View>
@@ -51,9 +51,8 @@ export const Countdown = (props) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: fontSize.xxxl,
-    fontWeight: 600,
+    fontWeight: '600',
     color: palette.white,
     padding: spacing.xxl,
-    backgroundColor: 'rbga(94, 132, 226, 0.3)',
   },
 });

@@ -3,14 +3,14 @@ import { View, Text, StyleSheet, Vibration, Platform } from 'react-native';
 import { ProgressBar } from 'react-native-paper';
 import { spacing, fontSize, palette } from '../../utils/baseStyles';
 import { RoundedButton } from '../../components/RoundedButton/RoundedButton';
-import {Countdown} from '../../components/Countdown/Countdown';
+import { Countdown } from '../../components/Countdown/Countdown';
 import { useKeepAwake } from 'expo-keep-awake';
 
 export const Timer = (props) => {
   const {
     updateHistory,
   } = props;
-  
+
   useKeepAwake();
   const { focusSubject, minutes, clear } = props;
 
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   task: {
-    fontWeight: 600,
+    fontWeight: '600',
     textAlign: 'center',
     fontSize: fontSize.xl,
     margin: spacing.xxl,

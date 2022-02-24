@@ -3,10 +3,10 @@ import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { palette, spacing, fontSize } from '../../utils/baseStyles';
 
 export const SubjectHistory = (props) => {
-  const { 
+  const {
     subjectHistory,
     clearHistory
-    } = props;
+  } = props;
 
   return (
     <View style={styles.container}>
@@ -17,7 +17,7 @@ export const SubjectHistory = (props) => {
         <Text style={styles.subject}>{subject}</Text>
       ))}
       {subjectHistory.length > 0 && <Pressable style={styles.clearButton} onPress={clearHistory}>
-        <Text style={{color: palette.white}}>clear</Text>
+        <Text style={{ color: palette.white }}>clear</Text>
       </Pressable>}
     </View>
   );
@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
   completedTitle: {
     color: palette.white,
     fontSize: fontSize.lg,
-    fontWeight: 200,
-    borderBottom: spacing.md,
+    fontWeight: '200',
+    marginBottom: spacing.md,
   },
   clearButton: {
     borderColor: palette.white,
